@@ -41,6 +41,11 @@ const siteContent = {
 //nav section
 let navBody = document.querySelector('nav');
 navBody.style.color = 'green';
+let navPre = document.createElement('a')
+navPre.textContent = 'Prepend';
+let navAppend = document.createElement('a');
+navAppend.textContent = 'Append';
+
 let navLinks = navBody.children;
 navLinks[0].textContent = siteContent['nav']['nav-item-1'];
 navLinks[1].textContent = siteContent['nav']['nav-item-2'];
@@ -48,7 +53,8 @@ navLinks[2].textContent = siteContent['nav']['nav-item-3'];
 navLinks[3].textContent = siteContent['nav']['nav-item-4'];
 navLinks[4].textContent = siteContent['nav']['nav-item-5'];
 navLinks[5].textContent = siteContent['nav']['nav-item-6'];
-
+navBody.prepend(navPre)
+navBody.append(navAppend)
 //cta section
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
